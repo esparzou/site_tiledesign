@@ -1,5 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <app-header>
+      <h3 slot="header-title">ABOUT ME</h3>
+    </app-header>
+    <app-about-text></app-about-text>
+    <app-banner-contact></app-banner-contact>
+    <app-footer></app-footer>
+    <app-contact v-show="isOpen"></app-contact>
   </div>
 </template>
+
+<script>
+import { openContact } from '@/mixins/openContact.js'
+   export default {
+      mixins: [ openContact ],   
+   }
+</script>

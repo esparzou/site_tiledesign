@@ -1,18 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="home">
+    <app-header>
+      <h3 slot="header-title">Magic is something you create.</h3>
+    </app-header>
+    <app-sections></app-sections>
+    <app-footer></app-footer>
+    <app-contact v-show="isOpen"></app-contact>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+import { openContact } from '@/mixins/openContact.js'
+   export default {
+      mixins: [ openContact ],   
+   }
 </script>
