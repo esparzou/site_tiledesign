@@ -31,7 +31,7 @@ h3 {
    font-weight: 300;
    text-align: center;
    position: relative;
-   top: 3.7rem;
+   top: 3.5rem;
 }
 .wrapper {
    @include wrapper(90, 718px);
